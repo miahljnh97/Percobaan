@@ -24,7 +24,6 @@
     ".NETCoreApp,Version=v3.1": {
       "TryoutFebruari/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "3.1.1",
           "Microsoft.EntityFrameworkCore.Design": "3.1.1",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "3.1.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",

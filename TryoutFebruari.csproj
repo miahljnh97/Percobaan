@@ -11,14 +11,15 @@
 
 
   <ItemGroup>
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.1" />
+    <Compile Remove="Models\OnlineOrder %28copy%29 %28another copy%29.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.1">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="Models\OnlineOrder %28copy%29 %28another copy%29.cs" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.1" />
   </ItemGroup>
 </Project>

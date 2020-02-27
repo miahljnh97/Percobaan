@@ -1,6 +1,15 @@
 ﻿using System;
 namespace TryoutFebruari.Models
 {
+    public enum status
+    {
+        failure = 0,
+        accepted = 1,
+        sending = 2,
+        done = 3
+        
+    }
+
     public class Customers
     {
         public int Id { get; set; }
@@ -16,7 +25,7 @@ namespace TryoutFebruari.Models
     {
         public int Id { get; set; }
         public int user_id { get; set; }
-        public string status { get; set; }
+        public status status { get; set; }
         public int driver_id { get; set; }
         public DateTime created_at { get; set; }
         public DateTime update_at { get; set; }
@@ -24,6 +33,7 @@ namespace TryoutFebruari.Models
 
     public class Order_items
     {
+        public int Id { get; set; }
         public int order_id { get; set; }
         public int product_id { get; set; }
         public int quantity { get; set; }

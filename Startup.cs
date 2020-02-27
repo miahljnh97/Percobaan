@@ -26,7 +26,8 @@ namespace TryoutFebruari
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<CustomerContext>(options => options.UseNpgsql("Host = 127.0.0.1; Username = postgres; Password = docker; Database= online_order"));
+            services.AddDbContext<OnlineContext>(options => options.UseNpgsql("Host = 127.0.0.1; Username = postgres; Password = docker; Database= online_order"));
+            
             services.AddControllers();
         }
 
