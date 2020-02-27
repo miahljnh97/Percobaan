@@ -73,14 +73,14 @@ namespace TryoutFebruari.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(string fullName, string username, string email, string phoneNumber)
+        public IActionResult Post(Customers customer)
         {
-            var customer = new Customers
+            customer = new Customers
             {
-                full_name = fullName,
-                username = username,
-                email = email,
-                phone = phoneNumber,
+                full_name = customer.full_name,
+                username = customer.username,
+                email = customer.email,
+                phone = customer.phone,
                 created_at = DateTime.Now,
                 update_at = DateTime.Now
             };
@@ -91,16 +91,6 @@ namespace TryoutFebruari.Controllers
                 message = "success retrieve data",
                 status = true,
                 data = customer
-            });
-        }
-        // GET: customers
-        public async Task<IActionResult> Index()
-        {
-            return Ok(new
-            {
-                message = "success retrieve data",
-                status = true,
-                data = View(await _context.customers.ToListAsync())
             });
         }
     

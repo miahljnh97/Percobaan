@@ -70,21 +70,21 @@ namespace TryoutFebruari.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(int orderId, int productId, int quantity = 1)
+        public IActionResult Post(Order_items order)
         {
-            var order_item = new Order_items
+            order = new Order_items
             {
-                order_id = orderId,
-                product_id = productId,
-                quantity = quantity
+                order_id = order.order_id,
+                product_id = order.product_id,
+                quantity = order.quantity
             };
-            _context.order_Items.Add(order_item);
+            _context.order_Items.Add(order);
             _context.SaveChanges();
             return Ok(new
             {
                 message = "success retrieve data",
                 status = true,
-                data = order_item
+                data = order
             });
         }
     }

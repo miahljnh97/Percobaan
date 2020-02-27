@@ -74,13 +74,13 @@ namespace TryoutFebruari.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(int custId, status status, int driveId)
+        public IActionResult Post(Orders order)
         {
-            var order = new Orders
+            order = new Orders
             {
-                user_id = custId,
-                status = status,
-                driver_id = driveId,
+                user_id = order.user_id,
+                status = order.status,
+                driver_id = order.driver_id,
                 created_at = DateTime.Now,
                 update_at = DateTime.Now
             };

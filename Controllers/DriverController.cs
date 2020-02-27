@@ -71,12 +71,12 @@ namespace TryoutFebruari.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(string fullName, string phoneNumber)
+        public IActionResult Post(Drivers driver)
         {
-            var driver = new Drivers
+            driver = new Drivers
             {
-                full_name = fullName,
-                phone_number = phoneNumber,
+                full_name = driver.full_name,
+                phone_number = driver.phone_number,
                 created_at = DateTime.Now,
                 update_at = DateTime.Now
             };

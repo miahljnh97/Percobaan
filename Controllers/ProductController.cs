@@ -71,12 +71,12 @@ namespace TryoutFebruari.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(string name, int price)
+        public IActionResult Post(Products product)
         {
-            var product = new Products
+            product = new Products
             {
-                name = name,
-                price = price,
+                name = product.name,
+                price = product.price,
                 created_at = DateTime.Now,
                 update_at = DateTime.Now
             };
