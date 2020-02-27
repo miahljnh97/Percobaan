@@ -1,24 +1,24 @@
 ﻿<Properties StartupConfiguration="{1B30B365-248E-4914-A1C0-37D684F6E99C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="OOContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/ProductController.cs">
     <Files>
-      <File FileName="OnlineOrderContext.cs" Line="11" Column="56" IsPinned="True" />
-      <File FileName="Startup.cs" Line="29" Column="168" />
-      <File FileName="Controllers/OnlineOrderController.cs" Line="22" Column="6" />
+      <File FileName="Startup.cs" Line="29" Column="50" />
       <File FileName="Models/OOModels.cs" Line="20" Column="43" />
-      <File FileName="Controllers/CustomersController.cs" Line="22" Column="1" />
-      <File FileName="Controllers/OrderController.cs" Line="22" Column="1" />
-      <File FileName="Controllers/Order_ItemController.cs" Line="22" Column="1" />
-      <File FileName="Controllers/ProductController.cs" Line="8" Column="21" />
-      <File FileName="Controllers/OOController.cs" Line="13" Column="6" />
+      <File FileName="Controllers/CustomersController.cs" Line="21" Column="26" />
+      <File FileName="Controllers/OrderController.cs" />
+      <File FileName="Controllers/Order_ItemController.cs" />
+      <File FileName="Controllers/ProductController.cs" Line="1" Column="1" />
+      <File FileName="OOContext.cs" Line="18" Column="50" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="TryoutFebruari" expanded="True">
             <Node name="TryoutFebruari" expanded="True">
+              <Node name="Dependencies" expanded="True" selected="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
               <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="OOContext.cs" selected="True" />
             </Node>
           </Node>
         </State>
