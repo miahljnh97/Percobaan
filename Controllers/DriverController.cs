@@ -55,13 +55,20 @@ namespace TryoutFebruari.Controllers
             return Ok(driver);
         }
 
-        // [HttpPatch("{id}")]
-        // public IActionResult Put(int id, Order_status status){
-        //     var order = _context.Order.First(i => i.Id == id);
-        //     order.Status = status;
-        //     _context.SaveChanges();
-        //     return Ok(order);
-        // }
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, Drivers driput)
+        {
+            var dri = _context.drivers.First(i => i.Id == id);
+
+            dri.full_name = driput.full_name;
+            dri.phone_number = driput.phone_number;
+            dri.created_at = dri.created_at;
+            dri.update_at = DateTime.Now;
+
+            _context.drivers.Update(dri);
+            _context.SaveChanges();
+            return Ok(dri);
+        }
 
         [HttpPost]
         public IActionResult Post(string fullName, string phoneNumber)

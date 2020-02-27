@@ -10,7 +10,7 @@ using TryoutFebruari;
 namespace TryoutFebruari.Migrations
 {
     [DbContext(typeof(OnlineContext))]
-    [Migration("20200227082816_OnlineCreate")]
+    [Migration("20200227110025_OnlineCreate")]
     partial class OnlineCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -109,8 +109,8 @@ namespace TryoutFebruari.Migrations
                     b.Property<int>("driver_id")
                         .HasColumnType("integer");
 
-                    b.Property<string>("status")
-                        .HasColumnType("text");
+                    b.Property<int>("status")
+                        .HasColumnType("integer");
 
                     b.Property<DateTime>("update_at")
                         .HasColumnType("timestamp without time zone");

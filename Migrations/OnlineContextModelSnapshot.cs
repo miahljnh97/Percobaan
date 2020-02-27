@@ -107,8 +107,8 @@ namespace TryoutFebruari.Migrations
                     b.Property<int>("driver_id")
                         .HasColumnType("integer");
 
-                    b.Property<string>("status")
-                        .HasColumnType("text");
+                    b.Property<int>("status")
+                        .HasColumnType("integer");
 
                     b.Property<DateTime>("update_at")
                         .HasColumnType("timestamp without time zone");

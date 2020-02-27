@@ -57,14 +57,22 @@ namespace TryoutFebruari.Controllers
             return Ok(order);
         }
 
-        // [HttpPatch("{id}")]
-        // public IActionResult Put(int id, Order_status status){
-        //     var order = _context.Order.First(i => i.Id == id);
-        //     order.Status = status;
-        //     order.Updated_at = DateTime.Now;
-        //     _context.SaveChanges();
-        //     return Ok(order);
-        // }
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, Orders orderput)
+        {
+            var order = _context.orders.First(i => i.Id == id);
+
+            order.user_id = orderput.user_id;
+            order.status = orderput.status;
+            order.driver_id = orderput.driver_id;
+            order.created_at = orderput.created_at;
+            order.update_at = DateTime.Now;
+
+            _context.orders.Update(order);
+            _context.SaveChanges();
+            return Ok(order);
+        }
+
         [HttpPost]
         public IActionResult Post(int custId, status status, int driveId)
         {

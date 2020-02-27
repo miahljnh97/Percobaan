@@ -55,14 +55,22 @@ namespace TryoutFebruari.Controllers
             return Ok(customer);
         }
 
-        //[HttpPatch("{id}")]
-        //public IActionResult Put(int id, Order_status status)
-        //{
-        //    var order = _context.Order.First(i => i.Id == id);
-        //    order.Status = status;
-        //    _context.SaveChanges();
-        //    return Ok(order);
-        //}
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, Customers customerput)
+        {
+            var customer = _context.customers.First(i => i.Id == id);
+
+            customer.full_name = customerput.full_name;
+            customer.username = customerput.username;
+            customer.email = customerput.email;
+            customer.phone = customerput.phone;
+            customer.created_at = customer.created_at;
+            customer.update_at = DateTime.Now;
+
+            _context.customers.Update(customer);
+            _context.SaveChanges();
+            return Ok(customer);
+        }
 
         [HttpPost]
         public IActionResult Post(string fullName, string username, string email, string phoneNumber)

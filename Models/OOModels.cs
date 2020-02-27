@@ -6,8 +6,8 @@ namespace TryoutFebruari.Models
         failure = 0,
         accepted = 1,
         sending = 2,
-        done = 3
-        
+        done = 3,
+        completed = 4
     }
 
     public class Customers

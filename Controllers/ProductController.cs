@@ -55,13 +55,21 @@ namespace TryoutFebruari.Controllers
             return Ok(product);
         }
 
-        // [HttpPatch("{id}")]
-        // public IActionResult Put(int id, Order_status status){
-        //     var order = _context.Order.First(i => i.Id == id);
-        //     order.Status = status;
-        //     _context.SaveChanges();
-        //     return Ok(order);
-        // }
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, Products proput)
+        {
+            var pro = _context.products.First(i => i.Id == id);
+
+            pro.name = proput.name;
+            pro.price = proput.price;
+            pro.created_at = proput.created_at;
+            pro.update_at = DateTime.Now;
+
+            _context.products.Update(pro);
+            _context.SaveChanges();
+            return Ok(pro);
+        }
+
         [HttpPost]
         public IActionResult Post(string name, int price)
         {

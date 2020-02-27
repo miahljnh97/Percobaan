@@ -64,7 +64,7 @@ namespace TryoutFebruari.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     user_id = table.Column<int>(nullable: false),
-                    status = table.Column<string>(nullable: true),
+                    status = table.Column<int>(nullable: false),
                     driver_id = table.Column<int>(nullable: false),
                     created_at = table.Column<DateTime>(nullable: false),
                     update_at = table.Column<DateTime>(nullable: false)
